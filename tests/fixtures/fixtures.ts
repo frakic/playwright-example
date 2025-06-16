@@ -1,11 +1,12 @@
 import { test as base } from '@playwright/test';
-import { IotDashboardPage, LoginPage } from '@playwright/pages';
+import { IotDashboardPage, LoginPage, ResetPasswordPage } from '@playwright/pages';
 import { Header, testUsers } from '@playwright/fixtures';
 import { TestUsers } from '@playwright/models';
 
 export const test = base.extend<{
 	iotDashboardPage: IotDashboardPage;
 	loginPage: LoginPage;
+	resetPasswordPage: ResetPasswordPage;
 
 	header: Header;
 
@@ -16,6 +17,9 @@ export const test = base.extend<{
 	},
 	loginPage: async ({ page }, use) => {
 		await use(new LoginPage(page));
+	},
+	resetPasswordPage: async ({ page }, use) => {
+		await use(new ResetPasswordPage(page));
 	},
 
 	header: async ({ page }, use) => {

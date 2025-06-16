@@ -4,7 +4,7 @@ export const userProjects: UserProject[] = [
 	{
 		name: 'active-user',
 		dependencies: ['active-user-setup'],
-		testMatch: [],
+		testMatch: ['**/password-reset.spec.ts'],
 	},
 	{
 		name: 'public',
