@@ -1,0 +1,7 @@
+{
+	"name": "playwright-example-tests",
+	"description": "Example test suite",
+	"version": "1.0.0",
+	"author": "frakic@frakic.com",
+	"type": "module"
+}
